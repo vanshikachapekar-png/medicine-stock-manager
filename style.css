@@ -1,84 +1,101 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-h1 {
+header {
+    background-color: #4CAF50;
+    color: white;
     text-align: center;
-    color: #2c3e50;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 form input, form button {
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 form button {
-    background-color: #27ae60;
+    background-color: #4CAF50;
     color: white;
-    border: none;
     cursor: pointer;
-    border-radius: 4px;
 }
 
 form button:hover {
-    background-color: #219150;
+    background-color: #45a049;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-th, td {
-    padding: 12px;
+table th, table td {
+    padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
-th {
-    background-color: #2980b9;
-    color: white;
+table th {
+    background-color: #f2f2f2;
 }
 
-tr.low-stock td {
+.low-stock {
+    background-color: #ffcccb;
+}
+
+.expired {
     background-color: #f8d7da;
-    color: #721c24;
-}
-
-button.action-btn {
-    padding: 5px 10px;
-    margin: 2px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button.edit-btn {
-    background-color: #f1c40f;
-    color: white;
-}
-
-button.delete-btn {
-    background-color: #e74c3c;
-    color: white;
 }

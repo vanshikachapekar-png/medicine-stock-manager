@@ -7,32 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Medicine Stock Manager</h1>
-
-        <form id="medicineForm">
-            <input type="text" id="name" placeholder="Medicine Name" required>
-            <input type="number" id="quantity" placeholder="Quantity" min="1" required>
-            <input type="date" id="expiry" placeholder="Expiry Date" required>
-            <button type="submit">Add Medicine</button>
-        </form>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Expiry Date</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="medicineTable">
-                <!-- Medicines will appear here -->
-            </tbody>
-        </table>
-    </div>
-
-    <script src="script.js"></script>
+    <header>
+        <h1>Welcome to Medicine Stock Manager</h1>
+        <p>Your reliable tool for managing pharmaceutical inventory.</p>
+        <div class="images">
+            <img src="https://via.placeholder.com/150" alt="Medicine 1">
+            <img src="https://via.placeholder.com/150" alt="Medicine 2">
+            <img src="https://via.placeholder.com/150" alt="Medicine 3">
+        </div>
+        <a href="stock.html" class="btn">Go to Stock Manager</a>
+    </header>
 </body>
 </html>

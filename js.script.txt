@@ -5,9 +5,8 @@ let medicines = [
     { id: 4, name: "Amoxicillin", quantity: 15, expiry: "2026-01-20" }
 ];
 
-
 const form = document.getElementById('medicineForm');
-const tableBody = document.getElementById('medicineTable');
+const tableBody = document.getElementById('medicineTable').getElementsByTagName('tbody')[0];
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -35,10 +34,8 @@ function renderTable() {
     medicines.forEach(med => {
         const row = document.createElement('tr');
 
-        // low-stock or expired check
-        if (med.quantity < 5 || med.expiry <= today) {
-            row.classList.add('low-stock');
-        }
+        if (med.quantity < 5) row.classList.add('low-stock');
+        if (med.expiry <= today) row.classList.add('expired');
 
         row.innerHTML = `
             <td>${med.name}</td>
@@ -46,8 +43,8 @@ function renderTable() {
             <td>${med.expiry}</td>
             <td>${med.quantity < 5 ? 'Low Stock' : (med.expiry <= today ? 'Expired' : 'OK')}</td>
             <td>
-                <button class="action-btn edit-btn" onclick="editMedicine(${med.id})">Edit</button>
-                <button class="action-btn delete-btn" onclick="deleteMedicine(${med.id})">Delete</button>
+                <button class="edit-btn" onclick="editMedicine(${med.id})">Edit</button>
+                <button class="delete-btn" onclick="deleteMedicine(${med.id})">Delete</button>
             </td>
         `;
         tableBody.appendChild(row);
@@ -67,3 +64,5 @@ function editMedicine(id) {
         renderTable();
     }
 }
+
+renderTable();
