@@ -1,4 +1,10 @@
-let medicines = [];
+let medicines = [
+    { id: 1, name: "Paracetamol", quantity: 20, expiry: "2025-12-31" },
+    { id: 2, name: "Ibuprofen", quantity: 8, expiry: "2025-10-15" },
+    { id: 3, name: "Vitamin C", quantity: 3, expiry: "2025-09-30" },
+    { id: 4, name: "Amoxicillin", quantity: 15, expiry: "2026-01-20" }
+];
+
 
 const form = document.getElementById('medicineForm');
 const tableBody = document.getElementById('medicineTable');
