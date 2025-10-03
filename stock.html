@@ -12,7 +12,26 @@
     <p>Track your medicine stock levels and expiry dates easily.</p>
   </header>
 
+  <section class="dashboard">
+    <div>Total Medicines: <span id="totalCount">0</span></div>
+    <div>Low Stock: <span id="lowStockCount">0</span></div>
+    <div>Expired: <span id="expiredCount">0</span></div>
+  </section>
+
   <section>
+    <div class="search-sort">
+      <input type="text" id="searchInput" placeholder="Search by medicine name...">
+      <select id="sortSelect">
+        <option value="">Sort By</option>
+        <option value="name-asc">Name ↑</option>
+        <option value="name-desc">Name ↓</option>
+        <option value="quantity-asc">Quantity ↑</option>
+        <option value="quantity-desc">Quantity ↓</option>
+        <option value="expiry-asc">Expiry ↑</option>
+        <option value="expiry-desc">Expiry ↓</option>
+      </select>
+    </div>
+
     <form id="medicineForm">
       <input type="text" id="name" placeholder="Medicine Name" required>
       <input type="number" id="quantity" placeholder="Quantity" required>

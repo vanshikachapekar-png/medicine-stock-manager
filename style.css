@@ -1,3 +1,4 @@
+/* General Body & Header */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,15 +21,48 @@ header p {
     margin: 10px 0;
 }
 
+/* Dashboard Summary */
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+/* Section */
 section {
     padding: 20px;
     background-color: white;
     margin: 20px auto;
     max-width: 900px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Search and Sort */
+.search-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-sort input, .search-sort select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex: 1;
+    min-width: 150px;
+}
+
+/* Form */
 form {
     display: flex;
     gap: 10px;
@@ -56,6 +90,7 @@ form button:hover {
     background-color: #45a049;
 }
 
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -72,6 +107,7 @@ table th {
     background-color: #f2f2f2;
 }
 
+/* Status Highlights */
 .low-stock {
     background-color: #fff3cd;
 }
@@ -80,6 +116,11 @@ table th {
     background-color: #f8d7da;
 }
 
+.expiry-soon {
+    background-color: #ffeeba;
+}
+
+/* Buttons */
 .edit-btn {
     background-color: #2196F3;
     color: white;
@@ -100,3 +141,54 @@ table th {
 
 .edit-btn:hover { background-color: #1976D2; }
 .delete-btn:hover { background-color: #c62828; }
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .search-sort, form {
+        flex-direction: column;
+    }
+
+    form button {
+        flex: 1;
+    }
+}
+
+/* Front Page Section */
+.welcome-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.welcome-section .images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.welcome-section .images img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.welcome-section .images img:hover {
+    transform: scale(1.1);
+}
+
+.welcome-section .welcome-text p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #555;
+}
+
