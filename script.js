@@ -59,7 +59,7 @@ function deleteMedicine(id) {
 function editMedicine(id) {
     const med = medicines.find(m => m.id === id);
     const newQuantity = prompt(`Update quantity for ${med.name}:`, med.quantity);
-    if (newQuantity !== null) {
+    if (newQuantity !== null && !isNaN(newQuantity)) {
         med.quantity = parseInt(newQuantity);
         renderTable();
     }

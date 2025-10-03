@@ -20,42 +20,19 @@ header p {
     margin: 10px 0;
 }
 
-.images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.images img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
 section {
     padding: 20px;
     background-color: white;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 900px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
     display: flex;
-    flex-direction: column;
     gap: 10px;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -64,12 +41,15 @@ form input, form button {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    flex: 1;
+    min-width: 150px;
 }
 
 form button {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    flex: 0.5;
 }
 
 form button:hover {
@@ -83,7 +63,7 @@ table {
 }
 
 table th, table td {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     border: 1px solid #ddd;
 }
@@ -93,9 +73,30 @@ table th {
 }
 
 .low-stock {
-    background-color: #ffcccb;
+    background-color: #fff3cd;
 }
 
 .expired {
     background-color: #f8d7da;
 }
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn:hover { background-color: #1976D2; }
+.delete-btn:hover { background-color: #c62828; }
